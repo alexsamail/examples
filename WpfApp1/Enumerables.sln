@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerables", "WpfApp1\Enumerables.csproj", "{19B0A876-5B04-41F9-A39A-4AD14076EC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBlackAndViolet", "WpfApp1\plugins\ThemeLibrary1\ThemeLibrary1\ThemeBlackAndViolet.csproj", "{94D6BD73-AE5F-4CBB-A8AA-2EA58CE2E71B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeBlackAndRed", "WpfApp1\plugins\ThemeLibrary2\ThemeLibrary2\ThemeBlackAndRed.csproj", "{55CD87E9-9126-4324-8F74-2FE4000647B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemePinkAndWhite", "WpfApp1\plugins\ThemeLibrary3\ThemeLibrary3\ThemePinkAndWhite.csproj", "{B6FF6041-0B14-4F45-BA4D-3EB2FA15AAB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITheme", "WpfApp1\plugins\ITheme\ITheme\ITheme.csproj", "{3187E605-D156-4BB6-AF6B-F3881D78E448}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19B0A876-5B04-41F9-A39A-4AD14076EC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B0A876-5B04-41F9-A39A-4AD14076EC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B0A876-5B04-41F9-A39A-4AD14076EC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B0A876-5B04-41F9-A39A-4AD14076EC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D6BD73-AE5F-4CBB-A8AA-2EA58CE2E71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D6BD73-AE5F-4CBB-A8AA-2EA58CE2E71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D6BD73-AE5F-4CBB-A8AA-2EA58CE2E71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D6BD73-AE5F-4CBB-A8AA-2EA58CE2E71B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CD87E9-9126-4324-8F74-2FE4000647B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CD87E9-9126-4324-8F74-2FE4000647B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CD87E9-9126-4324-8F74-2FE4000647B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CD87E9-9126-4324-8F74-2FE4000647B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FF6041-0B14-4F45-BA4D-3EB2FA15AAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FF6041-0B14-4F45-BA4D-3EB2FA15AAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FF6041-0B14-4F45-BA4D-3EB2FA15AAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FF6041-0B14-4F45-BA4D-3EB2FA15AAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3187E605-D156-4BB6-AF6B-F3881D78E448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3187E605-D156-4BB6-AF6B-F3881D78E448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3187E605-D156-4BB6-AF6B-F3881D78E448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3187E605-D156-4BB6-AF6B-F3881D78E448}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6F43A13-8A1F-4A64-94D8-FC60FA0DC8DF}
+	EndGlobalSection
+EndGlobal

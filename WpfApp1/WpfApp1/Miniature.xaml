@@ -1,0 +1,252 @@
+﻿<Window x:Class="Enumerables.Miniature"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Enumerables"
+        mc:Ignorable="d"
+        Title="Miniature" Height="650" Width="950">
+    <Window.Resources>
+        <PathGeometry x:Key="Star1">
+            <PathFigure IsClosed="True" StartPoint="450,450">
+                <ArcSegment Point="280,280" Size="50,50"/>
+                <ArcSegment Point="450,450" Size="50,50"/>
+            </PathFigure>
+        </PathGeometry>
+        <PathGeometry x:Key="Star2">
+            <PathFigure IsClosed="True" StartPoint="150, 150">
+                <ArcSegment Point="280,280" Size="50,50"/>
+                <ArcSegment Point="150,150" Size="50,50"/>
+            </PathFigure>
+        </PathGeometry>
+        <PathGeometry x:Key="Star3">
+            <PathFigure IsClosed="True" StartPoint="120, 120">
+                <ArcSegment Point="310,310" Size="50,50"/>
+                <ArcSegment Point="120,120" Size="50,50"/>
+            </PathFigure>
+        </PathGeometry>
+        <PathGeometry x:Key="Star4">
+        <PathFigure IsClosed="True" StartPoint="550,100">
+            <ArcSegment Point="700,50" Size="50,50"/>
+            <ArcSegment Point="550,100" Size="50,50"/>
+        </PathFigure>
+        </PathGeometry>
+        <PathGeometry x:Key="Star5">
+            <PathFigure IsClosed="True" StartPoint="100,500">
+                <ArcSegment Point="250,450" Size="50,50"/>
+                <ArcSegment Point="100,500" Size="50,50"/>
+            </PathFigure>
+        </PathGeometry>
+    </Window.Resources>
+    <Grid>
+        <Image Opacity="1.0" Source="pack://application:,,,/Image/stars.jpg" Stretch="Fill"/>
+        <Canvas>
+            <Polygon Canvas.Left="500" Canvas.Bottom="300" Points="0,20,22,20,30,0,38,20,60,20,40,30,50,50,30,40,10,50,20,30,0,20">
+                <Polygon.Fill>
+                    <RadialGradientBrush RadiusX="1" RadiusY="1" GradientOrigin="0.5, 0.8">
+                        <GradientStop Color="LightGoldenrodYellow" Offset="0" />
+                        <GradientStop Color="Orange" Offset="1" />
+                    </RadialGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                       Duration="0:0:15" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star2}" Source="Y" >
+                                </DoubleAnimationUsingPath>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Left)"
+                                       Duration="0:0:15" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star2}" Source="X" >
+                                </DoubleAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                        Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True">
+                                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:1" Value="Yellow" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:3" Value="PaleVioletRed" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:5" Value="Orange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:7" Value="Yellow"/>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:8" Value="OrangeRed"/>
+                                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Polygon.Triggers>
+            </Polygon>
+            <Polygon Canvas.Left="800" Canvas.Bottom="450" Canvas.Right="150" Points="0,20,22,20,30,0,38,20,60,20,40,30,50,50,30,40,10,50,20,30,0,20">
+                <Polygon.Fill>
+                    <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                        <GradientStop Color="Yellow" Offset="0" />
+                        <GradientStop Color="Violet" Offset="1" />
+                    </LinearGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                       Duration="0:0:13" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star4}" Source="Y" >
+                                </DoubleAnimationUsingPath>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Left)"
+                                       Duration="0:0:13" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star4}" Source="X" >
+                                </DoubleAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                        Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True">
+                                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:1" Value="DarkOrange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:3" Value="Yellow" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:5" Value="Orange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:7" Value="DarkOrange"/>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:8" Value="OrangeRed"/>
+                                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Polygon.Triggers>
+            </Polygon>
+            <Polygon Canvas.Left="200" Canvas.Bottom="100" Points="0,20,22,20,30,0,38,20,60,20,40,30,50,50,30,40,10,50,20,30,0,20">
+                <Polygon.Fill>
+                    <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                        <GradientStop Color="Violet" Offset="0" />
+                        <GradientStop Color="Yellow" Offset="1" />
+                    </LinearGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                       Duration="0:0:10" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star5}" Source="Y" >
+                                </DoubleAnimationUsingPath>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Left)"
+                                       Duration="0:0:10" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star5}" Source="X" >
+                                </DoubleAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                        Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True">
+                                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:1" Value="DarkOrange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:3" Value="Yellow" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:5" Value="Violet" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:7" Value="Yellow"/>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:8" Value="DarkViolet"/>
+                                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Polygon.Triggers>
+            </Polygon>
+            <Polygon Canvas.Left="250" Canvas.Top="150" Points="0,40,44,40,60,0,76,40,120,40,80,60,100,100,60,80,20,100,40,60,0,40">
+                <Polygon.Fill>
+                    <RadialGradientBrush RadiusX="1" RadiusY="1" GradientOrigin="0.3, 0.3">
+                        <GradientStop Color="Yellow" Offset="0" />
+                        <GradientStop Color="PaleVioletRed" Offset="0.8" />
+                    </RadialGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                       Duration="0:0:10" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star3}" Source="Y" >
+                                </DoubleAnimationUsingPath>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Left)"
+                                       Duration="0:0:10" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star3}" Source="X" >
+                                </DoubleAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                        Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True">
+                                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:1" Value="DarkOrange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:3" Value="Yellow" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:5" Value="Orange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:7" Value="DarkOrange"/>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:8" Value="OrangeRed"/>
+                                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Polygon.Triggers>
+            </Polygon>
+            <Polygon Canvas.Left="650" Canvas.Top="450" Points="0,40,44,40,60,0,76,40,120,40,80,60,100,100,60,80,20,100,40,60,0,40">
+                <Polygon.Fill>
+                    <RadialGradientBrush RadiusX="1" RadiusY="1" GradientOrigin="0.3, 0.3">
+                        <GradientStop Color="Red" Offset="0" />
+                        <GradientStop Color="Green" Offset="0.8" />
+                    </RadialGradientBrush>
+                </Polygon.Fill>
+                <Polygon.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Top)"
+                                       Duration="0:0:9" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star1}" Source="Y" >
+                                </DoubleAnimationUsingPath>
+                                <DoubleAnimationUsingPath Storyboard.TargetProperty="(Canvas.Left)"
+                                       Duration="0:0:9" RepeatBehavior="Forever"
+                                       PathGeometry="{StaticResource Star1}" Source="X" >
+                                </DoubleAnimationUsingPath>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="Fill.GradientStops[1].Color"
+                                        Duration="0:0:5" RepeatBehavior="Forever" AutoReverse="True">
+                                    <ColorAnimationUsingKeyFrames.KeyFrames>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:1" Value="DarkOrange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:3" Value="Red" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:5" Value="Orange" />
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:7" Value="Green"/>
+                                        <SplineColorKeyFrame KeySpline="0,2 1,0" KeyTime="0:0:8" Value="OrangeRed"/>
+                                    </ColorAnimationUsingKeyFrames.KeyFrames>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Polygon.Triggers>
+            </Polygon>
+        </Canvas>
+        
+    </Grid>
+</Window>
